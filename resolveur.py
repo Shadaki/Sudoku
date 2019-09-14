@@ -8,9 +8,9 @@ conflit=lambda i,j:i%9==j%9 or i//9==j//9 or (i%9//3==j%9//3 and i//27==j//27)
 
 # Fonction de résolution
 def resoudre(s):
-    try: i=s.index(".") # Si il y a un 0
-    except ValueError: return s # Renvoie le sudoku (résolu) si il n'y a plus de 0
-    conflits=[int(s[j]) for j in range(81) if conflit(i,j)]
+    try: i=s.index(".") # Si il y a un trou
+    except ValueError: return s # Renvoie le sudoku (résolu) si il n'y a plus de trou
+    conflits=[int(s[j]) for j in range(81) if conflit(i,j) and s[j]!="."]
     for n in range(1,10):
         if n not in conflits:
             r=resoudre(s[:i]+str(n)+s[i+1:])
