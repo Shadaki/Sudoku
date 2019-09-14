@@ -5,8 +5,8 @@ Les *inputs* se font en mettant tous les chiffres sur une seule ligne (de gauche
 
 `
 Ex: .......12........3..23..4....18....5.6..7.8.......9.....85.....9...4.5..47...6...`
-qui équivaut au sudoku ci-dessous :
 
+qui équivaut au sudoku ci-dessous :
 
 ```
 Le sudoku qui a demandé le plus de temps :
