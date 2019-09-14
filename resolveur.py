@@ -1,6 +1,8 @@
 #! /usr/bin/env python3
 # -*- coding: utf-8 -*-
 
+import time
+
 sudoku="1....7.9..3..2...8..96..5....53..9...1..8...26....4...3......1..4......7..7...3.."
 
 # Détermine si deux cases sont dans la même ligne, la même colonne ou le même bloc
@@ -28,4 +30,8 @@ def afficher(sol):
             print("|")
     print(sep)
 
-afficher(resoudre(sudoku))
+t1=time.time()
+sol=resoudre(sudoku)
+t2=time.time()
+afficher(sol)
+print("\nSudoku résolu en %.3f s" % (t2-t1))
