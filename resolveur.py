@@ -9,8 +9,7 @@ sudoku = input("Entrez un sudoku : ")
 # Détermine si deux cases sont dans la même ligne, la même colonne ou le même bloc
 
 
-def conflit(i, j): return i % 9 == j % 9 or i//9 == j//9 or (i %
-                                                             9//3 == j % 9//3 and i//27 == j//27)
+def conflit(i, j): return i%9 == j%9 or i//9 == j//9 or (i %9//3 == j % 9//3 and i//27 == j//27)
 
 # Fonction de résolution
 
