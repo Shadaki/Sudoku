@@ -7,13 +7,9 @@ sudoku = input("Entrez un sudoku : ")
 # "1....7.9..3..2...8..96..5....53..9...1..8...26....4...3......1..4......7..7...3.."
 
 # Détermine si deux cases sont dans la même ligne, la même colonne ou le même bloc
-
-
 def conflit(i, j): return i%9 == j%9 or i//9 == j//9 or (i %9//3 == j % 9//3 and i//27 == j//27)
 
 # Fonction de résolution
-
-
 def resoudre(s):
     try:
         i = s.index(".")  # Si il y a un trou
@@ -26,11 +22,8 @@ def resoudre(s):
             if r != None:
                 return r
 
-
 # Affichage du résultat sous forme d'un tableau 9x9
 sep = "+-------+-------+-------+"
-
-
 def afficher(sol):
     grid = ""
     for a in range(3):
@@ -41,7 +34,6 @@ def afficher(sol):
                 grid += "| "+" ".join(sol[n:n+3])+" "
             grid += "|\n"
     print(grid+sep)
-
 
 t1 = time.time()
 sol = resoudre(sudoku)
